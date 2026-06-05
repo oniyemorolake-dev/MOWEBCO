@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oniyemorolake-dev.github.io/MOWEBCO/sitemap.xml

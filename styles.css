@@ -583,6 +583,21 @@
     margin-top: 0.5rem;
   }
   .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(107,63,160,0.35); }
+  .submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: 0 4px 20px rgba(107,63,160,0.2);
+  }
+
+  .form-status {
+    min-height: 1.2rem;
+    margin-top: 0.9rem;
+    font-size: 0.84rem;
+    font-weight: 500;
+  }
+  .form-status.success { color: #2d7a4b; }
+  .form-status.error { color: #a03f6b; }
 
   /* FOOTER */
   footer {

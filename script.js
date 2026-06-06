@@ -67,18 +67,6 @@
   }
 
   bindAjaxForm({
-    formId: 'contactForm',
-    buttonId: 'submitBtn',
-    statusId: 'formStatus',
-    loadingText: 'Sending your enquiry...',
-    successText: 'Thanks! Your message was sent. I will reply within 24 hours.',
-    errorText: 'Something went wrong. Please try again or email me directly at mowebsiteco@gmail.com.',
-    successEvent: 'lead_submit_success',
-    errorEvent: 'lead_submit_error',
-    source: 'contact_form'
-  });
-
-  bindAjaxForm({
     formId: 'projectRequirementsForm',
     buttonId: 'projectSubmitBtn',
     statusId: 'projectFormStatus',

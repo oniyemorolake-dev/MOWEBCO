@@ -35,6 +35,28 @@
   .b3 { top: 60%; left: -60px; animation-duration: 20s; animation-delay: 10s; }
   .b4 { top: 80%; left: -60px; animation-duration: 22s; animation-delay: 3s; }
 
+  .floating-project-cta {
+    position: fixed;
+    right: 1.1rem;
+    bottom: 1.1rem;
+    z-index: 120;
+    background: linear-gradient(135deg, var(--lilac-dark), var(--lilac-deep));
+    color: white;
+    text-decoration: none;
+    padding: 0.78rem 1.05rem;
+    border-radius: 999px;
+    font-size: 0.83rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    box-shadow: 0 8px 24px rgba(107,63,160,0.35);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .floating-project-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(107,63,160,0.42);
+  }
+
   @keyframes floatBy {
     0% { transform: translateX(0) translateY(0) rotate(0deg); opacity: 0; }
     5% { opacity: 0.12; }
@@ -741,6 +763,14 @@
     .choice-grid-3 { grid-template-columns: 1fr; }
     .project-form-section { padding: 0.95rem; }
     .project-progress-step { padding: 0.65rem 0.7rem; }
+    .floating-project-cta {
+      right: 0.75rem;
+      left: 0.75rem;
+      bottom: 0.75rem;
+      text-align: center;
+      padding: 0.86rem 0.9rem;
+      font-size: 0.86rem;
+    }
     section { padding: 4rem 1.5rem; }
     .hero { padding: 7rem 1.5rem 3rem; }
   }

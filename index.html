@@ -529,6 +529,233 @@
   </div>
 </section>
 
+<!-- START YOUR PROJECT -->
+<section class="services-bg" id="start-project">
+  <div class="container">
+    <span class="section-tag">Start your project</span>
+    <h2 class="section-title">Start Your <em>Project</em></h2>
+    <p class="section-sub">Share your requirements in detail so I can send you a clear plan, timeline, and quote.</p>
+
+    <div class="project-progress fade-in" aria-label="Form progress indicator">
+      <div class="project-progress-step"><span>Step 1</span><strong>About you</strong></div>
+      <div class="project-progress-step"><span>Step 2</span><strong>Your project</strong></div>
+      <div class="project-progress-step"><span>Step 3</span><strong>Design</strong></div>
+      <div class="project-progress-step"><span>Step 4</span><strong>Budget</strong></div>
+    </div>
+
+    <div class="contact-form fade-in project-form-card">
+      <form id="projectRequirementsForm" action="https://formspree.io/f/mojzqdld" method="POST">
+        <input type="hidden" name="_replyto" value="mowebsiteco@gmail.com">
+        <input type="hidden" name="_subject" value="New project requirements - MO-WEBCO">
+
+        <div class="project-form-section">
+          <h3>Personal details</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full name</label>
+              <input id="fullName" type="text" name="full_name" required>
+            </div>
+            <div class="form-group">
+              <label for="businessName">Business name</label>
+              <input id="businessName" type="text" name="business_name" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="projectEmail">Email address</label>
+              <input id="projectEmail" type="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phoneNumber">Phone number</label>
+              <input id="phoneNumber" type="tel" name="phone_number">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="businessLocation">Business location/address</label>
+            <input id="businessLocation" type="text" name="business_location">
+          </div>
+        </div>
+
+        <div class="project-form-section">
+          <h3>Project details</h3>
+          <div class="form-group">
+            <label for="projectTypeFull">Type of project</label>
+            <select id="projectTypeFull" name="project_type" required>
+              <option value="">Select one...</option>
+              <option>New website</option>
+              <option>Redesign existing site</option>
+              <option>Fix broken site</option>
+              <option>Add pages to existing site</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="businessActivity">What does your business do?</label>
+            <textarea id="businessActivity" name="business_description" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="websiteGoal">What is the main goal of your website?</label>
+            <textarea id="websiteGoal" name="website_goal" placeholder="e.g. get more bookings, sell products"></textarea>
+          </div>
+
+          <fieldset class="project-fieldset">
+            <legend>Do you have an existing website?</legend>
+            <div class="choice-grid">
+              <label class="choice-item"><input type="radio" name="has_existing_website" value="Yes" required> Yes</label>
+              <label class="choice-item"><input type="radio" name="has_existing_website" value="No" required> No</label>
+            </div>
+          </fieldset>
+
+          <div class="form-group">
+            <label for="existingWebsiteUrl">If yes paste your website URL</label>
+            <input id="existingWebsiteUrl" type="text" name="existing_website_url" placeholder="https://example.com">
+          </div>
+        </div>
+
+        <div class="project-form-section">
+          <h3>Pages needed (select all that apply)</h3>
+          <div class="choice-grid choice-grid-3">
+            <label class="choice-item"><input type="checkbox" name="pages_needed[]" value="Home"> Home</label>
+            <label class="choice-item"><input type="checkbox" name="pages_needed[]" value="About us"> About us</label>
+            <label class="choice-item"><input type="checkbox" name="pages_needed[]" value="Services"> Services</label>
+            <label class="choice-item"><input type="checkbox" name="pages_needed[]" value="Pricing"> Pricing</label>
+            <label class="choice-item"><input type="checkbox" name="pages_needed[]" value="Gallery / Portfolio"> Gallery / Portfolio</label>
+            <label class="choice-item"><input type="checkbox" name="pages_needed[]" value="Booking / Appointments"> Booking / Appointments</label>
+            <label class="choice-item"><input type="checkbox" name="pages_needed[]" value="Contact"> Contact</label>
+            <label class="choice-item"><input type="checkbox" name="pages_needed[]" value="Blog"> Blog</label>
+            <label class="choice-item"><input type="checkbox" name="pages_needed[]" value="Online shop"> Online shop</label>
+          </div>
+          <div class="form-group" style="margin-top:1rem;">
+            <label for="otherPages">Other</label>
+            <input id="otherPages" type="text" name="other_pages">
+          </div>
+        </div>
+
+        <div class="project-form-section">
+          <h3>Design preferences</h3>
+          <div class="form-group">
+            <label for="brandColors">What colours represent your brand?</label>
+            <input id="brandColors" type="text" name="brand_colours">
+          </div>
+
+          <fieldset class="project-fieldset">
+            <legend>What feeling should your website give visitors?</legend>
+            <div class="choice-grid choice-grid-3">
+              <label class="choice-item"><input type="checkbox" name="brand_feeling[]" value="Luxury / high-end"> Luxury / high-end</label>
+              <label class="choice-item"><input type="checkbox" name="brand_feeling[]" value="Friendly / welcoming"> Friendly / welcoming</label>
+              <label class="choice-item"><input type="checkbox" name="brand_feeling[]" value="Professional / corporate"> Professional / corporate</label>
+              <label class="choice-item"><input type="checkbox" name="brand_feeling[]" value="Fun / playful"> Fun / playful</label>
+              <label class="choice-item"><input type="checkbox" name="brand_feeling[]" value="Minimal / clean"> Minimal / clean</label>
+              <label class="choice-item"><input type="checkbox" name="brand_feeling[]" value="Bold / edgy"> Bold / edgy</label>
+            </div>
+          </fieldset>
+
+          <div class="form-group">
+            <label for="inspirationWebsites">Share up to 3 websites you like the look of</label>
+            <textarea id="inspirationWebsites" name="inspiration_websites" placeholder="Paste URLs, one per line"></textarea>
+          </div>
+        </div>
+
+        <div class="project-form-section">
+          <h3>Content and assets</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="logoStatus">Do you have a logo?</label>
+              <select id="logoStatus" name="logo_status">
+                <option>Yes I'll send the file</option>
+                <option>No I need one designed (+$75)</option>
+                <option>I have one but want it updated</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="photosStatus">Do you have photos for the site?</label>
+              <select id="photosStatus" name="photos_status">
+                <option>Yes professional photos</option>
+                <option>I have phone photos</option>
+                <option>No please use stock images</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contentWriting">Will you write your own text content?</label>
+            <select id="contentWriting" name="content_writing">
+              <option>Yes I'll write it</option>
+              <option>No I need help writing it</option>
+              <option>Mix of both</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="project-form-section">
+          <h3>Add-ons wanted</h3>
+          <div class="choice-grid choice-grid-3">
+            <label class="choice-item"><input type="checkbox" name="add_ons[]" value="SEO setup (+$100)"> SEO setup (+$100)</label>
+            <label class="choice-item"><input type="checkbox" name="add_ons[]" value="Google Maps embed (+$50)"> Google Maps embed (+$50)</label>
+            <label class="choice-item"><input type="checkbox" name="add_ons[]" value="Logo design (+$75)"> Logo design (+$75)</label>
+            <label class="choice-item"><input type="checkbox" name="add_ons[]" value="Monthly maintenance ($75/month)"> Monthly maintenance ($75/month)</label>
+            <label class="choice-item"><input type="checkbox" name="add_ons[]" value="Extra pages (+$50 each)"> Extra pages (+$50 each)</label>
+            <label class="choice-item"><input type="checkbox" name="add_ons[]" value="Social media links (+$30)"> Social media links (+$30)</label>
+            <label class="choice-item"><input type="checkbox" name="add_ons[]" value="Online booking system (+$50)"> Online booking system (+$50)</label>
+          </div>
+        </div>
+
+        <div class="project-form-section">
+          <h3>Budget and timeline</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="budgetRangeFull">Budget range</label>
+              <select id="budgetRangeFull" name="budget_range" required>
+                <option value="">Select budget range...</option>
+                <option>Under $400</option>
+                <option>$400 - $800</option>
+                <option>$800 - $1,500</option>
+                <option>Over $1,500</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="timelineNeeded">When do you need it ready?</label>
+              <select id="timelineNeeded" name="timeline_needed">
+                <option>As soon as possible</option>
+                <option>Within 2 weeks</option>
+                <option>Within a month</option>
+                <option>No rush just get it right</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="leadSource">How did you hear about MO-WEBCO?</label>
+            <select id="leadSource" name="lead_source">
+              <option>Phone call</option>
+              <option>Email</option>
+              <option>Instagram</option>
+              <option>Google</option>
+              <option>Referral</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="project-form-section project-form-section-last">
+          <h3>Anything else we should know?</h3>
+          <div class="form-group">
+            <textarea name="extra_notes" placeholder="Special requests, questions, anything important to note"></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn" id="projectSubmitBtn">Send my requirements to Morolake</button>
+        <p class="form-status" id="projectFormStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">MO-WEBCO</div>

@@ -599,6 +599,108 @@
   .form-status.success { color: #2d7a4b; }
   .form-status.error { color: #a03f6b; }
 
+  /* START PROJECT FORM */
+  .project-progress {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(120px, 1fr));
+    gap: 0.8rem;
+  }
+
+  .project-progress-step {
+    background: rgba(200,168,233,0.18);
+    border: 1px solid rgba(200,168,233,0.4);
+    border-radius: 14px;
+    padding: 0.7rem 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .project-progress-step span {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--lilac-dark);
+    font-weight: 500;
+  }
+
+  .project-progress-step strong {
+    font-size: 0.88rem;
+    color: var(--text-dark);
+    font-weight: 500;
+  }
+
+  .project-form-card {
+    margin-top: 1.25rem;
+  }
+
+  .project-form-section {
+    border: 1px solid rgba(200,168,233,0.3);
+    border-radius: 14px;
+    background: rgba(250,247,253,0.62);
+    padding: 1.15rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-form-section h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 0.9rem;
+  }
+
+  .project-form-section-last {
+    margin-bottom: 0.25rem;
+  }
+
+  .project-fieldset {
+    border: 1px solid rgba(200,168,233,0.35);
+    border-radius: 12px;
+    padding: 0.85rem 0.9rem;
+    margin-bottom: 1rem;
+    background: rgba(255,255,255,0.75);
+  }
+
+  .project-fieldset legend {
+    padding: 0 0.35rem;
+    color: var(--text-mid);
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
+    font-weight: 500;
+  }
+
+  .choice-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+    gap: 0.6rem;
+  }
+
+  .choice-grid-3 {
+    grid-template-columns: repeat(3, minmax(160px, 1fr));
+  }
+
+  .choice-item {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.84rem;
+    color: var(--text-mid);
+    background: rgba(255,255,255,0.85);
+    border: 1px solid rgba(200,168,233,0.35);
+    border-radius: 10px;
+    padding: 0.55rem 0.65rem;
+    font-weight: 400;
+  }
+
+  .choice-item input {
+    accent-color: var(--lilac-deep);
+    width: 16px;
+    height: 16px;
+    margin: 0;
+  }
+
   /* FOOTER */
   footer {
     background: var(--text-dark);
@@ -634,6 +736,11 @@
     .hamburger { display: flex; }
     .contact-wrapper { grid-template-columns: 1fr; gap: 2rem; }
     .form-row { grid-template-columns: 1fr; }
+    .project-progress { grid-template-columns: 1fr 1fr; }
+    .choice-grid,
+    .choice-grid-3 { grid-template-columns: 1fr; }
+    .project-form-section { padding: 0.95rem; }
+    .project-progress-step { padding: 0.65rem 0.7rem; }
     section { padding: 4rem 1.5rem; }
     .hero { padding: 7rem 1.5rem 3rem; }
   }

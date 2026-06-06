@@ -25,22 +25,26 @@
     });
   });
 
-  const contactForm = document.getElementById('contactForm');
-  const submitBtn = document.getElementById('submitBtn');
-  const formStatus = document.getElementById('formStatus');
+  function bindAjaxForm(config) {
+    const form = document.getElementById(config.formId);
+    const button = document.getElementById(config.buttonId);
+    const status = document.getElementById(config.statusId);
 
-  if (contactForm && submitBtn && formStatus) {
-    contactForm.addEventListener('submit', async (event) => {
+    if (!form || !button || !status) {
+      return;
+    }
+
+    form.addEventListener('submit', async (event) => {
       event.preventDefault();
 
-      formStatus.className = 'form-status';
-      formStatus.textContent = 'Sending your enquiry...';
-      submitBtn.disabled = true;
+      status.className = 'form-status';
+      status.textContent = config.loadingText;
+      button.disabled = true;
 
       try {
-        const response = await fetch(contactForm.action, {
+        const response = await fetch(form.action, {
           method: 'POST',
-          body: new FormData(contactForm),
+          body: new FormData(form),
           headers: { 'Accept': 'application/json' }
         });
 
@@ -48,16 +52,40 @@
           throw new Error('Request failed');
         }
 
-        trackEvent('lead_submit_success', { source: 'contact_form' });
-        formStatus.className = 'form-status success';
-        formStatus.textContent = 'Thanks! Your message was sent. I will reply within 24 hours.';
-        contactForm.reset();
+        trackEvent(config.successEvent, { source: config.source });
+        status.className = 'form-status success';
+        status.textContent = config.successText;
+        form.reset();
       } catch (error) {
-        trackEvent('lead_submit_error', { source: 'contact_form' });
-        formStatus.className = 'form-status error';
-        formStatus.textContent = 'Something went wrong. Please try again or email me directly at mowebsiteco@gmail.com.';
+        trackEvent(config.errorEvent, { source: config.source });
+        status.className = 'form-status error';
+        status.textContent = config.errorText;
       } finally {
-        submitBtn.disabled = false;
+        button.disabled = false;
       }
     });
   }
+
+  bindAjaxForm({
+    formId: 'contactForm',
+    buttonId: 'submitBtn',
+    statusId: 'formStatus',
+    loadingText: 'Sending your enquiry...',
+    successText: 'Thanks! Your message was sent. I will reply within 24 hours.',
+    errorText: 'Something went wrong. Please try again or email me directly at mowebsiteco@gmail.com.',
+    successEvent: 'lead_submit_success',
+    errorEvent: 'lead_submit_error',
+    source: 'contact_form'
+  });
+
+  bindAjaxForm({
+    formId: 'projectRequirementsForm',
+    buttonId: 'projectSubmitBtn',
+    statusId: 'projectFormStatus',
+    loadingText: 'Sending your project requirements...',
+    successText: 'Thank you! Morolake will review your requirements and get back to you within 24 hours. 🦋',
+    errorText: 'Something went wrong. Please try again or email me directly at mowebsiteco@gmail.com.',
+    successEvent: 'project_requirements_submit_success',
+    errorEvent: 'project_requirements_submit_error',
+    source: 'project_requirements_form'
+  });
